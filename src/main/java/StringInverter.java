@@ -1,0 +1,19 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+
+public class StringInverter implements StringTransformer {
+
+    @Test
+    public void stringInverter() {
+        StringDrink drink = new StringDrink("ABCD");
+        StringInverter si = new StringInverter();
+        si.execute(drink);
+        assertEquals("DCBA", drink.getText());
+    }
+
+    @Override
+    public void execute(StringDrink drink) {
+
+    }
+}
