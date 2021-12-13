@@ -4,19 +4,15 @@ import static org.junit.Assert.assertEquals;
 
 public class StringReplacer implements StringTransformer{
 
-    public StringReplacer(char a, char x) {
-    }
+    char ch1, ch2;
 
-    @Test
-    public void stringReplacer() {
-        StringDrink drink = new StringDrink("ABCDABCD");
-        StringReplacer sr = new StringReplacer('A', 'X');
-        sr.execute(drink);
-        assertEquals("XBCDXBCD", drink.getText());
+    public StringReplacer(char ch1, char ch2) {
+        this.ch1 = ch1;
+        this.ch2 = ch2;
     }
 
     @Override
     public void execute(StringDrink drink) {
-
+        drink.setText(drink.getText().replace(ch1, ch2));
     }
 }

@@ -2,23 +2,18 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class StringDrink {
+    private String teste;
 
     public StringDrink(String teste) {
+        this.teste = teste;
     }
 
-    @Test
-    public void stringDrink(String s){
-        StringDrink drink = new StringDrink("ABCD");
-        assertEquals("ABCD", drink.getText());
-        drink.setText("DCBA");
-        assertEquals("DCBA", drink.getText());
+     public String getText() {
+        return teste;
     }
 
-    double getText() {
-        return 0;
-    }
-
-    private void setText(String teste) {
+    void setText(String teste) {
+        this.teste = teste;
     }
 
 }
